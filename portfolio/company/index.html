@@ -5,8 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TIS정보기술교육센터</title>
-     <!-- Favicon-->
-     <link rel="icon" type="image/x-icon" href="img/computer_icon.ico" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
@@ -49,6 +47,20 @@
           padding-top: 100px;
         }
     </style>
+
+
+    <script type="text/javascript">
+      // iframe resize
+      function autoResize(i)
+      {
+          (i).height=0;
+          var iframeHeight=
+          (i).contentWindow.document.body.scrollHeight;
+          (i).height=iframeHeight+20;
+      }
+    </script>
+
+
     <script>
       $(document).ready(function(){
         // Add smooth scrolling to all links in navbar + footer link
@@ -94,6 +106,7 @@
             <li><a href="#subject" data-toggle="collapse" data-target=".navbar-collapse.in">과정소개</a></li>
             <li><a href="#community" data-toggle="collapse" data-target=".navbar-collapse.in">커뮤니티</a></li>
             <li><a href="#maps" data-toggle="collapse" data-target=".navbar-collapse.in">오시는길</a></li>
+            <li><a href="#board" data-toggle="collapse" data-target=".navbar-collapse.in">Board</a></li>
           </ul>
         </div>
       </div>
@@ -253,6 +266,19 @@
       </script>
     </div>
     <!-- 오시는 길 -->
+
+    <!-- 게시판 ------------------------------------------------------------------>
+    <div class="container" id="board">
+      <h1 class="text-center">BOARD</h1>
+      <iframe id="iframe1" src="http://pearls.dothome.co.kr/g5/bbs/board.php?bo_table=board01" width="100%" onload="autoResize(this)" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+      </div>
+
+
+
+    <!-- 게시판-->
+
+
+
 
     <!-- footer ---------------------------------------------------------------------------->
     <footer class="container-fluid" style="background-color: #424141;">
